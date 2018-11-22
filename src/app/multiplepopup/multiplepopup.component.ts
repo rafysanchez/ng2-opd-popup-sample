@@ -7,7 +7,7 @@ import {Popup} from 'ng2-opd-popup';
   styleUrls: ['./multiplepopup.component.css']
 })
 export class MultiplepopupComponent implements OnInit {
-  
+
   email:string;
   password:string;
 
@@ -22,18 +22,25 @@ export class MultiplepopupComponent implements OnInit {
 
 
   showPopup1(){
-    this.popup1.options = {
-            cancleBtnClass: "btn btn-default", 
-            confirmBtnClass: "btn btn-default",
-            color: "#4180ab",
-            header: "Single Popup on a page"}
+    this.popup1.options = {header: 'Your custom header',
+    color: '#5cb85c', // red, blue....
+    widthProsentage: 40, // The with of the popou measured by browser width
+    animationDuration: 1, // in seconds, 0 = no animation
+    showButtons: true, // You can hide this in case you want to use custom buttons
+    confirmBtnContent: 'OK', // The text on your confirm button
+    cancleBtnContent: 'Cancel', // the text on your cancel button
+    confirmBtnClass: 'btn btn-default', // your class for styling the confirm button
+    cancleBtnClass: 'btn btn-default', // you class for styling the cancel button
+    animation: 'fadeInDown' // 'fadeInLeft', 'fadeInRight', 'fadeInUp', 'bounceIn','bounceInDown'
+  }
     this.popup1.show(this.popup1.options);
   }
 
   showPopup2(){
     this.popup2.options = {
-            cancleBtnClass: "btn btn-default", 
+            cancleBtnClass: "btn btn-default",
             confirmBtnClass: "btn btn-default",
+            cancleBtnContent: 'Cancel',
             color: "#5cb85c",
             header: "Size 60% of page - color = #5cb85c",
             widthProsentage:60,
@@ -43,7 +50,7 @@ export class MultiplepopupComponent implements OnInit {
 
   showPopup3(){
     this.popup3.options = {
-            cancleBtnClass: "btn btn-default", 
+            cancleBtnClass: "btn btn-default",
             confirmBtnClass: "btn btn-default",
             color: "#333",
             header: "Animations...",
@@ -54,7 +61,7 @@ export class MultiplepopupComponent implements OnInit {
 
   showPopup4(){
     this.popup4.options = {
-            cancleBtnClass: "btn btn-default", 
+            cancleBtnClass: "btn btn-default",
             confirmBtnClass: "btn btn-default",
             color: "#5cb85c",
             header: "Events...",
@@ -65,7 +72,7 @@ export class MultiplepopupComponent implements OnInit {
 
   showPopup5(){
     this.popup5.options = {
-            cancleBtnClass: "btn btn-default", 
+            cancleBtnClass: "btn btn-default",
             confirmBtnClass: "btn btn-mbe-attack",
             color: "#A0DE4F",
             header: "Login...",

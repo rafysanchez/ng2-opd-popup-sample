@@ -9,14 +9,15 @@ import {Popup} from 'ng2-opd-popup';
 export class SinglepopupComponent implements OnInit {
 
   constructor(private popup:Popup) { }
-  
+
 
   ngOnInit() {
   }
 
   showSample(){
     this.popup.options = {
-            cancleBtnClass: "btn btn-default", 
+            cancleBtnClass: "btn btn-default",
+            cancleBtnContent: 'Cancel', // the text on your cancel button
             confirmBtnClass: "btn btn-default",
             color: "#4180ab",
             header: "Single Popup on a page"}
